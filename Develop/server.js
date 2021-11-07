@@ -28,10 +28,10 @@ app.get('/notes', (req, res) =>
 );
 
 // GET Route for Wildcard (404 error page not found)
-app.get('*', (res, res) =>
+app.get('*', function(res, res){
  res.sendFile(path.join(__dirname, './public/404/html')),
  res.status(404)
-);
+});
 
 // localhost PORT (3001 or process environment)
 app.listen(PORT, () =>
