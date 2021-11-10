@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 const uuid = require('../helpers/uuid');
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const { writeToFile, readFromFile } = require('../helpers/fsUtils');
 
 // GET Route for retrieving all the feedback
 router.get('/notes', (req, res) => {
@@ -45,7 +45,7 @@ router.delete('/:id', function(req, res){
                 return note.id === noteId;
             });
             dataBase.splice(deleteIndex, 1);
-            writeToFile("./db/db.json", dataBase);
+            writeFile("./db/db.json", dataBase);
             res.json(dataBase);
         }
     });

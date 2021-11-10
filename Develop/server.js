@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { clog } = require('./middleware/clog');
-const api = require('./routes/index.js');
+const api = require('./routes/notes.js');
 const readFromFile = require('./helpers/fsUtils')
 
 // Setting up Express 
