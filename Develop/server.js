@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
+const readFromFile = require('./helpers/fsUtils')
 
 // Setting up Express 
 const PORT = process.env.port || 3001;
