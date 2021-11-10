@@ -45,7 +45,7 @@ router.delete('/:id', function(req, res){
                 return note.id === noteId;
             });
             dataBase.splice(deleteIndex, 1);
-            writeFile("./db/db.json", dataBase);
+            writeToFile("./db/db.json", dataBase);
             res.json(dataBase);
         }
     });
