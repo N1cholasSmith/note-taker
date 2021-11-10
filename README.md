@@ -9,7 +9,7 @@ The Note Taker is web application that utilizes Express.js, Node.js and Heroku t
 
 
 
-[notetaker.com](https://n1cholassmith.github.io/note-taker/)
+[notetaker.com](https://pacific-journey-01890.herokuapp.com/)
 
 
 
