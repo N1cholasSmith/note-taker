@@ -14,7 +14,7 @@ router.post('/notes', (req, res) => {
     // read file
     // add data to array
     // save array as file
-    readFromFile("./db/db.json", { encoding: "utf-8" }, (err, data) => {
+    readFromFile("./db/db.json", {encoding: "utf-8"}, (err, data) => {
         if (err) {
             console.log("Error writing file");
             res.status(500);
@@ -31,10 +31,10 @@ router.post('/notes', (req, res) => {
 });
 
 // read db
-// selected the confirmed note
+// selected the confirmed note via a unique ID
 // delete note from db
-router.delete('/:id', function(req, res){
-    readFromFile("./db/db.json", { encoding: "utf-8" }, (err, data) => {
+router.delete('/notes/:id', function(req, res){
+    readFromFile("./db/db.json", {encoding: "utf-8"}, (err, data) => {
         if (err){
             console.log("Error deleting file");
             res.status(500);
@@ -50,6 +50,5 @@ router.delete('/:id', function(req, res){
         }
     });
 });
-
 
 module.exports = router;
